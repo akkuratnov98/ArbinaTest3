@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id "org.springframework.boot" version "2.2.6.RELEASE"
+}
+
+group 'org.akkuratnov.arbina'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+jar{
+    baseName 'docker-spring-boot'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.2.6.RELEASE', ext: 'pom'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.6.RELEASE'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.200'
+}
